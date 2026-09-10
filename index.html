@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OJT Portfolio | Raicom LCC Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">OJT<span>Portfolio</span></div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#institutional-identity">NEMSU Identity</a></li>
+                <li><a href="#host-company">Host Company</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#logs">Weekly Logs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>My OJT Journey</h1>
+            <h2>Josepito S. Quizada Jr.</h2>
+            <p class="hero-program">BS Computer Science | North Eastern Mindanao State University</p>
+            <p>On-the-Job Training (OJT) is a very important part for us students in North Eastern Mindanao State University (NEMSU). It is like a bridge from what we read in books to what really happens in the real world.</p>
+            <a href="#logs" class="btn">View Work Logs</a>
+        </div>
+    </section>
+
+    <!-- NEMSU INSTITUTIONAL IDENTITY -->
+    <section id="institutional-identity">
+        <h2 class="section-title">NEMSU Institutional Identity</h2>
+        <div class="identity-grid">
+            <article class="identity-card">
+                <h3>Vision</h3>
+                <p>A globally competitive university committed to producing innovative, ethical, and competent graduates for sustainable development.</p>
+            </article>
+            <article class="identity-card">
+                <h3>Mission</h3>
+                <p>NEMSU shall provide quality, accessible, and relevant education, research, and extension services that empower individuals and communities.</p>
+            </article>
+            <article class="identity-card">
+                <h3>Core Values</h3>
+                <ul>
+                    <li>Integrity</li>
+                    <li>Excellence</li>
+                    <li>Professionalism</li>
+                    <li>Innovation</li>
+                    <li>Service</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- HOST COMPANY & TRAINING TIMELINE -->
+    <section id="host-company">
+        <h2 class="section-title">Host Company</h2>
+        <div class="host-company-intro">
+            <h3>Raicom LCC – Philippines Operation</h3>
+            <p><strong>Supervisor:</strong> Enrico Emil Dela Rosa</p>
+        </div>
+        <div class="host-company-grid">
+            <article class="host-card">
+                <h3>Company Mission</h3>
+                <p>Our mission is to create a work environment so electric and magnetic that we fundamentally change the way people view work.</p>
+            </article>
+            <article class="host-card">
+                <h3>The Raicom LCC Way</h3>
+                <p>Care is at the center of everything we do. For our people, our communities, and the future we share.</p>
+            </article>
+            <article class="host-card">
+                <h3>Core Values</h3>
+                <ul class="value-list">
+                    <li><strong>Radical Candor:</strong> You say what needs to be said and do what needs to be done, without exception and without hesitation.</li>
+                    <li><strong>Curiosity:</strong> You approach every challenge with thoughtful questions, an open mind, and an eagerness to learn.</li>
+                    <li><strong>Commitment to Growth:</strong> You work hard to overcome challenges, limiting beliefs, and personal circumstances.</li>
+                    <li><strong>Impeccable Reliability:</strong> You are fully present in conversations, focused on what matters, and consistent in everything you do.</li>
+                </ul>
+            </article>
+        </div>
+
+        <h2 class="section-title timeline-title">Training Timeline</h2>
+        <div class="timeline-grid">
+            <article class="timeline-card">
+                <span class="timeline-label">Pre-Deployment</span>
+                <p>Completed all institutional requirements including the Application Letter, Endorsement Letter from NEMSU CITE, Notarized Memorandum of Agreement/Waiver, and submission of my professional Resume.</p>
+            </article>
+            <article class="timeline-card">
+                <span class="timeline-label">During Deployment</span>
+                <p>Focused on full-stack web development. Practiced front-end skills making responsive website designs, making dynamic changes in the DOM, and using external APIs with JavaScript async await. Transitioned to backend development using Docker to run a MySQL database, and built a REST API using Node.js and Express. Recorded progress via Weekly Accomplishment Reports and Daily Time Records (DTR).</p>
+            </article>
+            <article class="timeline-card">
+                <span class="timeline-label">Post-Deployment</span>
+                <p>Successfully completed 162 required training hours. Finalized the Performance Evaluation with Sir Enrico Emil Dela Rosa and compiled all documentation for the final Narrative Report.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ABOUT & HOURS OVERVIEW -->
+    <section id="about">
+        <h2 class="section-title">About & Internship Overview</h2>
+        <div class="about-grid">
+            <div class="about-info">
+                <h3>Internship Details</h3>
+                <br>
+                <p><strong>Company:</strong> Raicom LCC – Philippines Operation</p>
+                <p><strong>Focus:</strong> Full-Stack Web Development</p>
+                <p><strong>Supervisor:</strong> Enrico Emil Dela Rosa</p>
+                <p><strong>Completed:</strong> 162 required training hours</p>
+            </div>
+            <div class="progress-box">
+                <h3>Training Hours Tracker</h3>
+                <br>
+                <div class="progress-details">
+                    <span>Progress</span>
+                    <span id="hours-text">0 / 162 Hours</span>
+                </div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <p id="percentage-text" style="text-align: right; font-weight: 600; color: var(--accent);">0% Completed
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WEEKLY LOGS (FILTERABLE) -->
+    <section id="logs">
+        <h2 class="section-title">Daily & Weekly Logs</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Logs</button>
+            <button class="filter-btn" data-filter="week1">Week 1</button>
+            <button class="filter-btn" data-filter="week2">Week 2</button>
+            <button class="filter-btn" data-filter="week3">Week 3</button>
+            <button class="filter-btn" data-filter="week4">Week 4</button>
+            <button class="filter-btn" data-filter="week5">Week 5</button>
+        </div>
+        <div class="logs-grid">
+            <div class="log-card" data-category="week1">
+                <div class="date">Week 1 • June 15-19, 2026</div>
+                <h3>Orientation, HTML, CSS & Git Bash</h3>
+                <p>I started my OJT with a formal orientation covering the company culture, procedures, and internship requirements. I learned HTML foundations, semantic tags, document structure, and CSS basics including inline, internal, and external styling. I created a personal webpage and beginner exercises for text styling, buttons, boxes, and profile cards. I also designed a website for Mr. Seven using HTML and CSS, presented my progress, applied feedback, and learned Git Bash basics such as initializing repositories, checking project states, using <code>git add</code>, and using <code>git commit</code>.</p>
+            </div>
+            <div class="log-card" data-category="week2">
+                <div class="date">Week 2 • June 22-25, 2026</div>
+                <h3>JavaScript Foundations & Communication</h3>
+                <p>I continued the daily routine of presenting IT-related news and receiving feedback to improve my communication and presentation skills. Through FreeCodeCamp, I studied JavaScript variables, strings, booleans, numbers, functions, arrays, objects, and loops. I also practiced typing tests to improve my speed and accuracy. The week strengthened my programming fundamentals, consistency, and confidence when presenting to co-interns and supervisors.</p>
+            </div>
+            <div class="log-card" data-category="week3">
+                <div class="date">Week 3 • June 29-July 2, 2026</div>
+                <h3>GitHub, Git & DOM Manipulation</h3>
+                <p>I presented an IT news topic about Meta Ray-Ban Smart Glasses, discussing its built-in camera and AI capabilities. I continued developing the assigned website and practicing JavaScript, HTML, and CSS through FreeCodeCamp. I learned GitHub and Git for collaboration and version control, created a repository, and published the website online. I also received a task focused on JavaScript DOM Manipulation, exploring how JavaScript interacts with and modifies web page elements.</p>
+            </div>
+            <div class="log-card" data-category="week4">
+                <div class="date">Week 4 • July 6-9, 2026</div>
+                <h3>APIs, Docker & SQL Databases</h3>
+                <p>I practiced touch typing, continued FreeCodeCamp lessons, studied the previous task's codebase, and researched topics for daily tech news presentations. I created a Todo List website using an API and applied POST, PUT, and DELETE methods. I also built a Docker container using a GitHub repository provided by Sir Rico as a guide and researched different SQL databases. By the end of the week, I rendered 43 hours and 30 minutes, with 114 hours and 35 minutes remaining.</p>
+            </div>
+            <div class="log-card" data-category="week5">
+                <div class="date">Week 5 • July 13-16, 2026</div>
+                <h3>Full-Stack Product Inventory System</h3>
+                <p>I focused on developing a full-stack Product Inventory Management System. I created a development plan, built the backend, connected it to a local database, and tested API endpoints using Postman. I deployed the backend to Render, migrated the database to TiDB Cloud, and connected the frontend to the live backend API. The system includes registration, login, dashboard, product management, supplier management, transactions, and inventory management. After testing and fixing issues, I successfully deployed the system as a live web application.</p>
+                <a class="log-link" href="https://products-inventory-management.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Application</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS / KEY DELIVERABLES -->
+    <section id="projects">
+        <h2 class="section-title">Key Deliverables</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <div class="project-img">Animals CRUD Website</div>
+                <div class="project-info">
+                    <h3>Animals CRUD Frontend</h3>
+                    <p>A frontend CRUD project for managing animal records with a responsive interface and dynamic user interactions.</p>
+                    <div class="project-tags">
+                        <span class="tag">Frontend</span>
+                        <span class="tag">CRUD</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                    <a class="project-link" href="https://josepitong10.github.io/front_end_CRUD_animals/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                </div>
+            </article>
+            <article class="project-card">
+                <div class="project-img">Product Inventory System</div>
+                <div class="project-info">
+                    <h3>Product Inventory Management System</h3>
+                    <p>A deployed full-stack application for managing products, suppliers, transactions, users, and inventory.</p>
+                    <div class="project-tags">
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">MySQL</span>
+                        <span class="tag">Docker</span>
+                    </div>
+                    <a class="project-link" href="https://products-inventory-management.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- LEARNING OUTCOMES & SKILLS -->
+    <section id="skills">
+        <h2 class="section-title">Learning Outcomes</h2>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3>Hard Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-badge">HTML5 / CSS3</span>
+                    <span class="skill-badge">Vanilla JavaScript</span>
+                    <span class="skill-badge">Git & GitHub</span>
+                    <span class="skill-badge">REST API Integration</span>
+                    <span class="skill-badge">Responsive Web Design</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>Soft Skills</h3>
+                <div class="skills-list">
+                    <span class="skill-badge">Agile/Scrum Workflow</span>
+                    <span class="skill-badge">Team Collaboration</span>
+                    <span class="skill-badge">Problem Solving</span>
+                    <span class="skill-badge">Time Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & VERIFICATION -->
+    <section id="contact">
+        <h2 class="section-title">Verification & Contact</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Supervisor Verification</h3>
+                <br>
+                <p><strong>Supervisor Name:</strong> Enrico Emil Dela Rosa</p>
+                <p><strong>Company:</strong> Raicom LCC – Philippines Operation</p>
+            </div>
+            <div class="contact-form">
+                <h3>Get in Touch</h3>
+                <br>
+                <form id="portfolio-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Write your message..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL POPUP -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle">Project Title</h3>
+            <br>
+            <p id="modalDescription">Project details go here...</p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Josepito S. Quizada Jr. All Rights Reserved | NEMSU CITE OJT Journey</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

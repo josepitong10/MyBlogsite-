@@ -23,6 +23,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#logs">Weekly Logs</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -212,6 +213,76 @@
         </div>
     </section>
 
+    <section id="certificates">
+        <h2 class="section-title">Certificates & Achievements</h2>
+        <div class="certificates-grid">
+            <article class="certificate-card">
+                <div class="certificate-img">FreeCodeCamp Certificate</div>
+                <div class="certificate-info">
+                    <h3>Responsive Web Design Certification</h3>
+                    <p>Completed the FreeCodeCamp Responsive Web Design course, covering HTML, CSS, and responsive design principles.</p>
+                    <a class="certificate-link" href="https://www.freecodecamp.org/certification/josepitong10/responsive-web-design" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                </div>
+            </article>
+            <article class="certificate-card">
+                <div class="certificate-img">FreeCodeCamp Certificate</div>
+                <div class="certificate-info">
+                    <h3>JavaScript Algorithms and Data Structures Certification</h3>
+                    <p>Completed the FreeCodeCamp JavaScript Algorithms and Data Structures course, focusing on JavaScript fundamentals and problem-solving.</p>
+                    <a class="certificate-link" href="https://www.freecodecamp.org/certification/josepitong10/javascript-algorithms-and-data-structures" target="_blank" rel="noopener noreferrer">View Certificate</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- DOCUMENT & CERTIFICATE GALLERY -->
+    <section id="gallery">
+        <h2 class="section-title">Documents & Certificate Gallery</h2>
+        <div class="gallery-toolbar">
+            <div>
+                <h3>Keep your OJT evidence together</h3>
+                <p>Add photos, scanned documents, and certificates to this gallery.</p>
+            </div>
+            <div class="gallery-upload">
+                <label for="gallery-category">Category</label>
+                <select id="gallery-category">
+                    <option value="Image">Image</option>
+                    <option value="Document">Document</option>
+                    <option value="Certificate">Certificate</option>
+                </select>
+                <label for="gallery-input" class="upload-btn">＋ Add Files</label>
+                <input id="gallery-input" type="file" accept="image/*,.pdf,.doc,.docx" multiple>
+            </div>
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+            <article class="gallery-card">
+                <img class="gallery-preview" data-gallery-preview src="assets/ojt-workspace.svg" alt="OJT workspace image">
+                <div class="gallery-card-info">
+                    <h3>OJT Workspace</h3>
+                    <span class="gallery-category">Image</span>
+                </div>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-preview" data-gallery-preview src="assets/responsive-web-design-certificate.svg" alt="Responsive Web Design certificate">
+                <div class="gallery-card-info">
+                    <h3>Responsive Web Design Certificate</h3>
+                    <span class="gallery-category">Certificate</span>
+                </div>
+            </article>
+            <article class="gallery-card">
+                <img class="gallery-preview" data-gallery-preview src="assets/javascript-certificate.svg" alt="JavaScript certificate">
+                <div class="gallery-card-info">
+                    <h3>JavaScript Algorithms Certificate</h3>
+                    <span class="gallery-category">Certificate</span>
+                </div>
+            </article>
+            <div class="gallery-empty" id="gallery-empty" style="display: none;">
+                <span>＋</span>
+                <p>Your uploaded files will appear here.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- LEARNING OUTCOMES & SKILLS -->
     <section id="skills">
         <h2 class="section-title">Learning Outcomes</h2>
@@ -254,11 +325,11 @@
                 <form id="portfolio-form">
                     <div class="form-group">
                         <label for="name">Your Name</label>
-                        <input type="text" id="name" required placeholder="John Doe">
+                        <input type="text" id="name" required placeholder="Joseph Quizada">
                     </div>
                     <div class="form-group">
                         <label for="email">Your Email</label>
-                        <input type="email" id="email" required placeholder="john@example.com">
+                        <input type="email" id="email" required placeholder="quizadajoseph@example.com">
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
@@ -278,6 +349,11 @@
             <br>
             <p id="modalDescription">Project details go here...</p>
         </div>
+    </div>
+
+    <div class="gallery-modal" id="gallery-modal" aria-hidden="true">
+        <button class="gallery-modal-close" id="gallery-modal-close" aria-label="Close image preview">&times;</button>
+        <img id="gallery-modal-image" src="" alt="Expanded gallery preview">
     </div>
 
     <!-- FOOTER -->

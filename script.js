@@ -70,3 +70,71 @@ document.getElementById('portfolio-form').addEventListener('submit', (e) => {
     alert('Thank you for reaching out! Your message has been sent successfully.');
     e.target.reset();
 });
+
+// --- Upload Gallery ---
+const galleryInput = document.getElementById('gallery-input');
+const galleryCategory = document.getElementById('gallery-category');
+const galleryGrid = document.getElementById('gallery-grid');
+const galleryEmpty = document.getElementById('gallery-empty');
+const galleryModal = document.getElementById('gallery-modal');
+const galleryModalImage = document.getElementById('gallery-modal-image');
+const galleryModalClose = document.getElementById('gallery-modal-close');
+
+document.querySelectorAll('[data-gallery-preview]').forEach(image => {
+    image.addEventListener('click', () => openGalleryImage(image.src));
+});
+
+galleryInput.addEventListener('change', () => {
+    Array.from(galleryInput.files).forEach(file => {
+        const card = document.createElement('article');
+        card.className = 'gallery-card';
+
+        const preview = document.createElement(file.type.startsWith('image/') ? 'img' : 'div');
+        preview.className = 'gallery-preview';
+
+        if (file.type.startsWith('image/')) {
+            preview.alt = file.name;
+            preview.addEventListener('click', () => openGalleryImage(preview.src));
+            const reader = new FileReader();
+            reader.addEventListener('load', () => {
+                preview.src = reader.result;
+            });
+            reader.readAsDataURL(file);
+        } else {
+            preview.classList.add('document-preview');
+            const documentType = file.name.split('.').pop().toUpperCase();
+            preview.innerHTML = `<span>${documentType}</span><small>Document preview</small>`;
+        }
+
+        const info = document.createElement('div');
+        info.className = 'gallery-card-info';
+        info.innerHTML = `<h3 title="${file.name}">${file.name}</h3><span class="gallery-category">${galleryCategory.value}</span>`;
+
+        card.append(preview, info);
+        galleryGrid.appendChild(card);
+    });
+
+    if (galleryInput.files.length > 0) {
+        galleryEmpty.style.display = 'none';
+    }
+    galleryInput.value = '';
+});
+
+function openGalleryImage(source) {
+    galleryModalImage.src = source;
+    galleryModal.classList.add('open');
+    galleryModal.setAttribute('aria-hidden', 'false');
+}
+
+function closeGalleryImage() {
+    galleryModal.classList.remove('open');
+    galleryModal.setAttribute('aria-hidden', 'true');
+    galleryModalImage.src = '';
+}
+
+galleryModalClose.addEventListener('click', closeGalleryImage);
+galleryModal.addEventListener('click', event => {
+    if (event.target === galleryModal) {
+        closeGalleryImage();
+    }
+});

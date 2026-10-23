@@ -4,10 +4,27 @@ const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    hamburger.classList.toggle('open');
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('active'));
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('open');
+    });
+});
+
+// --- Header Shadow & Back-to-Top Button ---
+const header = document.getElementById('site-header');
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+    backToTop.classList.toggle('show', window.scrollY > 600);
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // --- Lightbox ---

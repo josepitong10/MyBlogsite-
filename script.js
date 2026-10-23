@@ -20,6 +20,27 @@ const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    hamburger.classList.toggle('open');
+});
+
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('open');
+    });
+});
+
+// --- Header Shadow & Back-to-Top Button ---
+const header = document.getElementById('site-header');
+const backToTop = document.getElementById('back-to-top');
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+    backToTop.classList.toggle('show', window.scrollY > 600);
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
 // --- Filter System for Weekly Logs ---
@@ -35,38 +56,35 @@ filterButtons.forEach(button => {
         const filter = button.getAttribute('data-filter');
 
         logCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
+            card.hidden = !(filter === 'all' || card.getAttribute('data-category') === filter);
         });
     });
 });
 
-// --- Modal Functions ---
-const modal = document.getElementById('projectModal');
-
-function openModal(title, description) {
-    document.getElementById('modalTitle').innerText = title;
-    document.getElementById('modalDescription').innerText = description;
-    modal.style.display = 'flex';
-}
-
-function closeModal() {
-    modal.style.display = 'none';
-}
-
-// Close modal when clicking outside content area
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        closeModal();
-    }
+// --- Read More Toggle for Log Posts ---
+document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', () => {
+        const card = button.closest('.log-card');
+        const expanded = card.classList.toggle('expanded');
+        button.innerText = expanded ? 'Show less' : 'Read more';
+    });
 });
+
+// --- Reveal Sections on Scroll ---
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(section => revealObserver.observe(section));
 
 // --- Contact Form Submission Handling ---
 document.getElementById('portfolio-form').addEventListener('submit', (e) => {
     e.preventDefault();
-    alert('Thank you for reaching out! Your message has been sent successfully.');
+    document.getElementById('form-success').hidden = false;
     e.target.reset();
 });

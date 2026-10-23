@@ -4,58 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OJT Portfolio | Raicom LCC Journey</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <title>MyBlogSite | Raicom LCC Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
     <!-- HEADER / NAVIGATION -->
-    <header>
+    <header id="site-header">
         <div class="nav-container">
-            <div class="logo">OJT<span>Portfolio</span></div>
-            <div class="hamburger" id="hamburger">
+            <a href="index.html" class="logo">My<span>BlogSite</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="nav-links">
-                <li><a href="#institutional-identity">NEMSU Identity</a></li>
+                <li><a href="#institutional-identity">NEMSU</a></li>
                 <li><a href="#host-company">Host Company</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#logs">Weekly Logs</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
             </ul>
         </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="hero">
+    <section class="hero" style="--hero-image: url('assets/raicombatch1.jpg');">
         <div class="hero-content">
-            <h1>My OJT Journey</h1>
-            <h2>Josepito S. Quizada Jr.</h2>
-            <p class="hero-program">BS Computer Science | North Eastern Mindanao State University</p>
+            <span class="hero-chip">OJT Blog · Summer 2026</span>
+            <h1>My OJT <span class="gradient-text">Journey</span></h1>
+            <div class="hero-author">
+                <span class="avatar">JQ</span>
+                <div>
+                    <strong>Josepito S. Quizada Jr.</strong>
+                    <small>BS Computer Science · North Eastern Mindanao State University</small>
+                </div>
+            </div>
             <p>On-the-Job Training (OJT) is a very important part for us students in North Eastern Mindanao State University (NEMSU). It is like a bridge from what we read in books to what really happens in the real world.</p>
-            <a href="#logs" class="btn">View Work Logs</a>
+            <div class="hero-actions">
+                <a href="#logs" class="btn">Read the Weekly Logs</a>
+                <a href="gallery.html" class="btn btn-ghost">View Photo Gallery</a>
+            </div>
+            <div class="hero-stats">
+                <div><strong>162</strong><span>Training Hours</span></div>
+                <div><strong>5</strong><span>Weeks</span></div>
+                <div><strong>2</strong><span>Live Projects</span></div>
+            </div>
         </div>
+        <a href="#institutional-identity" class="scroll-hint" aria-label="Scroll down"></a>
     </section>
 
     <!-- NEMSU INSTITUTIONAL IDENTITY -->
-    <section id="institutional-identity">
+    <section id="institutional-identity" class="reveal">
+        <span class="section-eyebrow">My University</span>
         <h2 class="section-title">NEMSU Institutional Identity</h2>
         <div class="identity-grid">
             <article class="identity-card">
+                <span class="card-icon">◎</span>
                 <h3>Vision</h3>
                 <p>A globally competitive university committed to producing innovative, ethical, and competent graduates for sustainable development.</p>
             </article>
             <article class="identity-card">
+                <span class="card-icon">➤</span>
                 <h3>Mission</h3>
                 <p>NEMSU shall provide quality, accessible, and relevant education, research, and extension services that empower individuals and communities.</p>
             </article>
             <article class="identity-card">
+                <span class="card-icon">★</span>
                 <h3>Core Values</h3>
-                <ul>
+                <ul class="pill-list">
                     <li>Integrity</li>
                     <li>Excellence</li>
                     <li>Professionalism</li>
@@ -67,11 +89,15 @@
     </section>
 
     <!-- HOST COMPANY & TRAINING TIMELINE -->
-    <section id="host-company">
+    <section id="host-company" class="band reveal">
+        <span class="section-eyebrow">Where I Trained</span>
         <h2 class="section-title">Host Company</h2>
         <div class="host-company-intro">
-            <h3>Raicom LCC – Philippines Operation</h3>
-            <p><strong>Supervisor:</strong> Enrico Emil Dela Rosa</p>
+            <div>
+                <h3>Raicom LCC – Philippines Operation</h3>
+                <p><strong>Supervisor:</strong> Enrico Emil Dela Rosa</p>
+            </div>
+            <span class="intro-badge">Tandag City, Surigao del Sur</span>
         </div>
         <div class="host-company-grid">
             <article class="host-card">
@@ -96,14 +122,17 @@
         <h2 class="section-title timeline-title">Training Timeline</h2>
         <div class="timeline-grid">
             <article class="timeline-card">
+                <span class="timeline-step">1</span>
                 <span class="timeline-label">Pre-Deployment</span>
                 <p>Completed all institutional requirements including the Application Letter, Endorsement Letter from NEMSU CITE, Notarized Memorandum of Agreement/Waiver, and submission of my professional Resume.</p>
             </article>
             <article class="timeline-card">
+                <span class="timeline-step">2</span>
                 <span class="timeline-label">During Deployment</span>
                 <p>Focused on full-stack web development. Practiced front-end skills making responsive website designs, making dynamic changes in the DOM, and using external APIs with JavaScript async await. Transitioned to backend development using Docker to run a MySQL database, and built a REST API using Node.js and Express. Recorded progress via Weekly Accomplishment Reports and Daily Time Records (DTR).</p>
             </article>
             <article class="timeline-card">
+                <span class="timeline-step">3</span>
                 <span class="timeline-label">Post-Deployment</span>
                 <p>Successfully completed 162 required training hours. Finalized the Performance Evaluation with Sir Enrico Emil Dela Rosa and compiled all documentation for the final Narrative Report.</p>
             </article>
@@ -111,20 +140,21 @@
     </section>
 
     <!-- ABOUT & HOURS OVERVIEW -->
-    <section id="about">
+    <section id="about" class="reveal">
+        <span class="section-eyebrow">At a Glance</span>
         <h2 class="section-title">About & Internship Overview</h2>
         <div class="about-grid">
             <div class="about-info">
                 <h3>Internship Details</h3>
-                <br>
-                <p><strong>Company:</strong> Raicom LCC – Philippines Operation</p>
-                <p><strong>Focus:</strong> Full-Stack Web Development</p>
-                <p><strong>Supervisor:</strong> Enrico Emil Dela Rosa</p>
-                <p><strong>Completed:</strong> 162 required training hours</p>
+                <dl class="detail-list">
+                    <div><dt>Company</dt><dd>Raicom LCC – Philippines Operation</dd></div>
+                    <div><dt>Focus</dt><dd>Full-Stack Web Development</dd></div>
+                    <div><dt>Supervisor</dt><dd>Enrico Emil Dela Rosa</dd></div>
+                    <div><dt>Completed</dt><dd>162 required training hours</dd></div>
+                </dl>
             </div>
             <div class="progress-box">
                 <h3>Training Hours Tracker</h3>
-                <br>
                 <div class="progress-details">
                     <span>Progress</span>
                     <span id="hours-text">0 / 162 Hours</span>
@@ -132,14 +162,14 @@
                 <div class="progress-bar-bg">
                     <div class="progress-bar-fill" id="progress-fill"></div>
                 </div>
-                <p id="percentage-text" style="text-align: right; font-weight: 600; color: var(--accent);">0% Completed
-                </p>
+                <p id="percentage-text" class="percentage-text">0% Completed</p>
             </div>
         </div>
     </section>
 
-    <!-- WEEKLY LOGS (FILTERABLE) -->
-    <section id="logs">
+    <!-- WEEKLY LOGS (FILTERABLE BLOG POSTS) -->
+    <section id="logs" class="band reveal">
+        <span class="section-eyebrow">The Blog</span>
         <h2 class="section-title">Daily & Weekly Logs</h2>
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">All Logs</button>
@@ -150,41 +180,83 @@
             <button class="filter-btn" data-filter="week5">Week 5</button>
         </div>
         <div class="logs-grid">
-            <div class="log-card" data-category="week1">
-                <div class="date">Week 1 • June 15-19, 2026</div>
-                <h3>Orientation, HTML, CSS & Git Bash</h3>
-                <p>I started my OJT with a formal orientation covering the company culture, procedures, and internship requirements. I learned HTML foundations, semantic tags, document structure, and CSS basics including inline, internal, and external styling. I created a personal webpage and beginner exercises for text styling, buttons, boxes, and profile cards. I also designed a website for Mr. Seven using HTML and CSS, presented my progress, applied feedback, and learned Git Bash basics such as initializing repositories, checking project states, using <code>git add</code>, and using <code>git commit</code>.</p>
-            </div>
-            <div class="log-card" data-category="week2">
-                <div class="date">Week 2 • June 22-25, 2026</div>
-                <h3>JavaScript Foundations & Communication</h3>
-                <p>I continued the daily routine of presenting IT-related news and receiving feedback to improve my communication and presentation skills. Through FreeCodeCamp, I studied JavaScript variables, strings, booleans, numbers, functions, arrays, objects, and loops. I also practiced typing tests to improve my speed and accuracy. The week strengthened my programming fundamentals, consistency, and confidence when presenting to co-interns and supervisors.</p>
-            </div>
-            <div class="log-card" data-category="week3">
-                <div class="date">Week 3 • June 29-July 2, 2026</div>
-                <h3>GitHub, Git & DOM Manipulation</h3>
-                <p>I presented an IT news topic about Meta Ray-Ban Smart Glasses, discussing its built-in camera and AI capabilities. I continued developing the assigned website and practicing JavaScript, HTML, and CSS through FreeCodeCamp. I learned GitHub and Git for collaboration and version control, created a repository, and published the website online. I also received a task focused on JavaScript DOM Manipulation, exploring how JavaScript interacts with and modifies web page elements.</p>
-            </div>
-            <div class="log-card" data-category="week4">
-                <div class="date">Week 4 • July 6-9, 2026</div>
-                <h3>APIs, Docker & SQL Databases</h3>
-                <p>I practiced touch typing, continued FreeCodeCamp lessons, studied the previous task's codebase, and researched topics for daily tech news presentations. I created a Todo List website using an API and applied POST, PUT, and DELETE methods. I also built a Docker container using a GitHub repository provided by Sir Rico as a guide and researched different SQL databases. By the end of the week, I rendered 43 hours and 30 minutes, with 114 hours and 35 minutes remaining.</p>
-            </div>
-            <div class="log-card" data-category="week5">
-                <div class="date">Week 5 • July 13-16, 2026</div>
-                <h3>Full-Stack Product Inventory System</h3>
-                <p>I focused on developing a full-stack Product Inventory Management System. I created a development plan, built the backend, connected it to a local database, and tested API endpoints using Postman. I deployed the backend to Render, migrated the database to TiDB Cloud, and connected the frontend to the live backend API. The system includes registration, login, dashboard, product management, supplier management, transactions, and inventory management. After testing and fixing issues, I successfully deployed the system as a live web application.</p>
-                <a class="log-link" href="https://products-inventory-management.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Application</a>
-            </div>
+            <article class="log-card" data-category="week1">
+                <div class="log-cover">
+                    <img src="assets/724375684_2868672676807858_7904577269663058665_n.jpg" alt="Interns writing HTML in VS Code" loading="lazy">
+                    <span class="log-week">Week 1</span>
+                </div>
+                <div class="log-body">
+                    <div class="date">June 15-19, 2026</div>
+                    <h3>Orientation, HTML, CSS & Git Bash</h3>
+                    <p class="log-text">I started my OJT with a formal orientation covering the company culture, procedures, and internship requirements. I learned HTML foundations, semantic tags, document structure, and CSS basics including inline, internal, and external styling. I created a personal webpage and beginner exercises for text styling, buttons, boxes, and profile cards. I also designed a website for Mr. Seven using HTML and CSS, presented my progress, applied feedback, and learned Git Bash basics such as initializing repositories, checking project states, using <code>git add</code>, and using <code>git commit</code>.</p>
+                    <button class="read-more" type="button">Read more</button>
+                </div>
+            </article>
+            <article class="log-card" data-category="week2">
+                <div class="log-cover">
+                    <img src="assets/724152556_1752923692343780_7006901634733153793_n.jpg" alt="Interns practicing on laptops" loading="lazy">
+                    <span class="log-week">Week 2</span>
+                </div>
+                <div class="log-body">
+                    <div class="date">June 22-25, 2026</div>
+                    <h3>JavaScript Foundations & Communication</h3>
+                    <p class="log-text">I continued the daily routine of presenting IT-related news and receiving feedback to improve my communication and presentation skills. Through FreeCodeCamp, I studied JavaScript variables, strings, booleans, numbers, functions, arrays, objects, and loops. I also practiced typing tests to improve my speed and accuracy. The week strengthened my programming fundamentals, consistency, and confidence when presenting to co-interns and supervisors.</p>
+                    <button class="read-more" type="button">Read more</button>
+                </div>
+            </article>
+            <article class="log-card" data-category="week3">
+                <div class="log-cover">
+                    <img src="assets/728969310_1725456452208736_2410912896039311364_n.jpg" alt="Smart glasses IT news presentation" loading="lazy">
+                    <span class="log-week">Week 3</span>
+                </div>
+                <div class="log-body">
+                    <div class="date">June 29-July 2, 2026</div>
+                    <h3>GitHub, Git & DOM Manipulation</h3>
+                    <p class="log-text">I presented an IT news topic about Meta Ray-Ban Smart Glasses, discussing its built-in camera and AI capabilities. I continued developing the assigned website and practicing JavaScript, HTML, and CSS through FreeCodeCamp. I learned GitHub and Git for collaboration and version control, created a repository, and published the website online. I also received a task focused on JavaScript DOM Manipulation, exploring how JavaScript interacts with and modifies web page elements.</p>
+                    <button class="read-more" type="button">Read more</button>
+                </div>
+            </article>
+            <article class="log-card" data-category="week4">
+                <div class="log-cover">
+                    <img src="assets/741324029_2167921987384156_7016959534248674836_n.jpg" alt="Async fetch code in VS Code" loading="lazy">
+                    <span class="log-week">Week 4</span>
+                </div>
+                <div class="log-body">
+                    <div class="date">July 6-9, 2026</div>
+                    <h3>APIs, Docker & SQL Databases</h3>
+                    <p class="log-text">I practiced touch typing, continued FreeCodeCamp lessons, studied the previous task's codebase, and researched topics for daily tech news presentations. I created a Todo List website using an API and applied POST, PUT, and DELETE methods. I also built a Docker container using a GitHub repository provided by Sir Rico as a guide and researched different SQL databases. By the end of the week, I rendered 43 hours and 30 minutes, with 114 hours and 35 minutes remaining.</p>
+                    <button class="read-more" type="button">Read more</button>
+                </div>
+            </article>
+            <article class="log-card" data-category="week5">
+                <div class="log-cover">
+                    <img src="assets/755864337_1749140056100746_517151868854817988_n.jpg" alt="Node.js server and Postman on a laptop" loading="lazy">
+                    <span class="log-week">Week 5</span>
+                </div>
+                <div class="log-body">
+                    <div class="date">July 13-16, 2026</div>
+                    <h3>Full-Stack Product Inventory System</h3>
+                    <p class="log-text">I focused on developing a full-stack Product Inventory Management System. I created a development plan, built the backend, connected it to a local database, and tested API endpoints using Postman. I deployed the backend to Render, migrated the database to TiDB Cloud, and connected the frontend to the live backend API. The system includes registration, login, dashboard, product management, supplier management, transactions, and inventory management. After testing and fixing issues, I successfully deployed the system as a live web application.</p>
+                    <button class="read-more" type="button">Read more</button>
+                    <a class="log-link" href="https://products-inventory-management.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Application →</a>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- PROJECTS / KEY DELIVERABLES -->
-    <section id="projects">
+    <section id="projects" class="reveal">
+        <span class="section-eyebrow">What I Built</span>
         <h2 class="section-title">Key Deliverables</h2>
         <div class="projects-grid">
             <article class="project-card">
-                <div class="project-img">Animals CRUD Website</div>
+                <div class="project-img">
+                    <div class="browser-bar"><span></span><span></span><span></span></div>
+                    <div class="project-preview">
+                        <strong>Animals CRUD</strong>
+                        <small>josepitong10.github.io</small>
+                    </div>
+                </div>
                 <div class="project-info">
                     <h3>Animals CRUD Frontend</h3>
                     <p>A frontend CRUD project for managing animal records with a responsive interface and dynamic user interactions.</p>
@@ -193,11 +265,17 @@
                         <span class="tag">CRUD</span>
                         <span class="tag">JavaScript</span>
                     </div>
-                    <a class="project-link" href="https://josepitong10.github.io/front_end_CRUD_animals/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                    <a class="project-link" href="https://josepitong10.github.io/front_end_CRUD_animals/" target="_blank" rel="noopener noreferrer">View Live Project →</a>
                 </div>
             </article>
             <article class="project-card">
-                <div class="project-img">Product Inventory System</div>
+                <div class="project-img alt">
+                    <div class="browser-bar"><span></span><span></span><span></span></div>
+                    <div class="project-preview">
+                        <strong>Inventory System</strong>
+                        <small>products-inventory-management.onrender.com</small>
+                    </div>
+                </div>
                 <div class="project-info">
                     <h3>Product Inventory Management System</h3>
                     <p>A deployed full-stack application for managing products, suppliers, transactions, users, and inventory.</p>
@@ -207,14 +285,15 @@
                         <span class="tag">MySQL</span>
                         <span class="tag">Docker</span>
                     </div>
-                    <a class="project-link" href="https://products-inventory-management.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Project</a>
+                    <a class="project-link" href="https://products-inventory-management.onrender.com/" target="_blank" rel="noopener noreferrer">View Live Project →</a>
                 </div>
             </article>
         </div>
     </section>
 
     <!-- JOURNEY GALLERY PREVIEW -->
-    <section id="gallery">
+    <section id="gallery" class="band reveal">
+        <span class="section-eyebrow">Photos</span>
         <h2 class="section-title">My OJT Journey Gallery</h2>
         <div class="gallery-preview-grid">
             <a href="gallery.html#day-one" class="gallery-preview-item large">
@@ -244,7 +323,8 @@
     </section>
 
     <!-- LEARNING OUTCOMES & SKILLS -->
-    <section id="skills">
+    <section id="skills" class="reveal">
+        <span class="section-eyebrow">Takeaways</span>
         <h2 class="section-title">Learning Outcomes</h2>
         <div class="skills-grid">
             <div class="skills-category">
@@ -270,18 +350,19 @@
     </section>
 
     <!-- CONTACT & VERIFICATION -->
-    <section id="contact">
+    <section id="contact" class="band reveal">
+        <span class="section-eyebrow">Say Hello</span>
         <h2 class="section-title">Verification & Contact</h2>
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Supervisor Verification</h3>
-                <br>
-                <p><strong>Supervisor Name:</strong> Enrico Emil Dela Rosa</p>
-                <p><strong>Company:</strong> Raicom LCC – Philippines Operation</p>
+                <dl class="detail-list">
+                    <div><dt>Supervisor</dt><dd>Enrico Emil Dela Rosa</dd></div>
+                    <div><dt>Company</dt><dd>Raicom LCC – Philippines Operation</dd></div>
+                </dl>
             </div>
             <div class="contact-form">
                 <h3>Get in Touch</h3>
-                <br>
                 <form id="portfolio-form">
                     <div class="form-group">
                         <label for="name">Your Name</label>
@@ -295,28 +376,33 @@
                         <label for="message">Message</label>
                         <textarea id="message" rows="4" required placeholder="Write your message..."></textarea>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    <button type="submit" class="btn btn-block">Send Message</button>
+                    <p class="form-success" id="form-success" hidden>Thank you for reaching out! Your message has been received.</p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- MODAL POPUP -->
-    <div class="modal" id="projectModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h3 id="modalTitle">Project Title</h3>
-            <br>
-            <p id="modalDescription">Project details go here...</p>
-        </div>
-    </div>
-
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Josepito S. Quizada Jr. All Rights Reserved | NEMSU CITE OJT Journey</p>
+        <div class="footer-inner">
+            <div>
+                <a href="index.html" class="logo">My<span>BlogSite</span></a>
+                <p>My On-the-Job Training journey at Raicom LCC, written by a NEMSU BS Computer Science student.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="#logs">Weekly Logs</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <p class="footer-copy">&copy; 2026 Josepito S. Quizada Jr. All Rights Reserved | NEMSU CITE OJT Journey</p>
     </footer>
 
-    <script src="script.js?v=2"></script>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="script.js?v=3"></script>
 </body>
 
 </html>

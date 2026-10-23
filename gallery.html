@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OJT Gallery | Raicom LCC Journey</title>
-    <link rel="stylesheet" href="style.css?v=2">
+    <title>MyBlogSite Gallery | Raicom LCC Journey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
 
     <!-- HEADER / NAVIGATION -->
-    <header>
+    <header id="site-header">
         <div class="nav-container">
-            <div class="logo">OJT<span>Portfolio</span></div>
-            <div class="hamburger" id="hamburger">
+            <a href="index.html" class="logo">My<span>BlogSite</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#day-one">Day One</a></li>
@@ -24,24 +27,25 @@
                 <li><a href="#presentations">Presentations</a></li>
                 <li><a href="#apis">APIs</a></li>
                 <li><a href="#full-stack">Full-Stack</a></li>
-                <li><a href="#completion">Certificate</a></li>
+                <li><a href="#completion" class="nav-cta">Certificate</a></li>
             </ul>
         </div>
     </header>
 
     <!-- GALLERY HERO -->
-    <section class="hero gallery-hero">
+    <section class="hero gallery-hero" style="--hero-image: url('assets/722131070_1001934719464063_4691913325391901336_n.jpg');">
         <div class="hero-content">
-            <h1>My OJT Journey in Photos</h1>
-            <h2>Raicom LCC – Philippines Operation</h2>
+            <span class="hero-chip">Photo Journal · Raicom LCC – Philippines Operation</span>
+            <h1>My OJT Journey <span class="gradient-text">in Photos</span></h1>
             <p>From the first day with Batch 1 to the certificate of completion, these photos show 162 hours of learning, presenting, and building as a BS Computer Science intern from NEMSU.</p>
-            <div class="journey-stats">
+            <div class="hero-stats">
                 <div><strong>162</strong><span>Training Hours</span></div>
                 <div><strong>5</strong><span>Weeks</span></div>
-                <div><strong>19</strong><span>Moments</span></div>
+                <div><strong>18</strong><span>Photos</span></div>
                 <div><strong>1</strong><span>Certificate</span></div>
             </div>
         </div>
+        <a href="#day-one" class="scroll-hint" aria-label="Scroll down"></a>
     </section>
 
     <div class="journey">
@@ -204,7 +208,7 @@
 
         <div class="journey-end">
             <p>Thank you, Raicom LCC, Sir Enrico, and my fellow interns, for being part of this journey.</p>
-            <a href="index.html" class="btn">Back to Portfolio</a>
+            <a href="index.html" class="btn">Back to Home</a>
         </div>
     </div>
 
@@ -221,10 +225,24 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Josepito S. Quizada Jr. All Rights Reserved | NEMSU CITE OJT Journey</p>
+        <div class="footer-inner">
+            <div>
+                <a href="index.html" class="logo">My<span>BlogSite</span></a>
+                <p>My On-the-Job Training journey at Raicom LCC, written by a NEMSU BS Computer Science student.</p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#logs">Weekly Logs</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+        <p class="footer-copy">&copy; 2026 Josepito S. Quizada Jr. All Rights Reserved | NEMSU CITE OJT Journey</p>
     </footer>
 
-    <script src="gallery.js?v=2"></script>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="gallery.js?v=3"></script>
 </body>
 
 </html>
